@@ -1,0 +1,17 @@
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I" 
+# tell screen how to set colors. AB = background, AF=foreground 
+term "xterm-256color"
+termcapinfo xterm-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' 
+# erase background with current bg color 
+defbce "on" 
+
+# run bash with --login (-<shellpath>)
+shell -/bin/bash
+
+# encoding
+encoding UTF-8
+#
+# fix residual editor text
+altscreen on

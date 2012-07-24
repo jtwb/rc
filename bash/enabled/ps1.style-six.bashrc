@@ -1,0 +1,1 @@
+../available/ps1.style-six.bashrc
