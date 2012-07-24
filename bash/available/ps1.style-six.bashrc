@@ -4,8 +4,12 @@ function dirs_depth () {
 
 function parse_git_branch () {
     BRANCH=$(git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
-    BLEN=$(echo `echo $BRANCH | wc -c` " - 1" | bc)
-    echo $BRANCH | cut -c1 | sed -e "s/^./${BLEN}\0/"
+    if [ "$BRANCH" = '' ]
+    then printf ''
+    else
+        BLEN=$(echo `echo $BRANCH | wc -c` " - 1" | bc)
+        echo ${BLEN}$(echo $BRANCH | cut -c1)
+    fi
 }
 
 function extra_color () {
