@@ -6,13 +6,14 @@ VERBOSE=false
 
 BACKUPS="$HOME/.rc-backups"
 
-DOTFILES="bashrc gitconfig vimrc bcrc screenrc bash_aliases"
+DOTFILES="bashrc bash_aliases gitconfig vimrc vim bcrc screenrc"
 BACKUP_TARGETS="$DOTFILES rc"
 
 OKP=true
 
 function init_backups {
 
+    rm -Rf $BACKUPS
     mkdir -p $BACKUPS
 }
 
@@ -26,6 +27,7 @@ function do_backup {
        then
            echo "Backing up directory $file"
            mv $HOME/$file $BACKUPS
+           mv "$HOME/.$file" $BACKUPS
        else if [ -e "$HOME/.$file" ] || [ -L "$HOME/.$file" ]
            then
                echo "Backing up file .$file"
