@@ -1,3 +1,14 @@
+#
+# Example:
+# 1jason@gravityj:~$ cd src/rc/
+# 2jason@gravityj6m:~/src/rc$ 
+#
+# Features:
+# * Color
+# * Shows dirs depth, if using dirs hack
+# * Shows git branch name in shorthand when in a git repo
+# * Spicy @
+
 function dirs_depth () {
     echo `dirs -v | wc -l`
 }
