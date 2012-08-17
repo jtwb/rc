@@ -38,3 +38,6 @@ if $BIGTERM
     colorscheme wombat256
 endif
 
+" #au FileType js so .vim/js.vimrc
+" au FileType js set shiftwidth=2
+au BufRead,BufNewFile *.js so $HOME/.vim/js.vimrc
