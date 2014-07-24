@@ -45,8 +45,6 @@ function do_backup {
 
 function do_install_symlinks {
 
-    ln -s $REPO_DIR $HOME/rc
-
     for dotfile in $DOTFILES
     do
         ln -s $REPO_DIR/$dotfile $HOME/.$dotfile
