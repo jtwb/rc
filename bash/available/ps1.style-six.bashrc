@@ -32,4 +32,4 @@ function extra_color () {
     fi
 }
 
-PS1='\[\e[0;31m\]$(dirs_depth)\[\e[0;32m\]\u$(extra_color)∈\[\e[0;32m\]\h\[\e[0m\]\[\e[0;33m\]$(parse_git_branch)\[\e[0m\]:\w ζ '
+PS1='\[\e[0;31m\]$(dirs_depth)\[\e[0;32m\]\u\[$(extra_color)\]∈\[\e[0;32m\]\h\[\e[0m\]\[\e[0;33m\]$(parse_git_branch)\[\e[0m\]:\w ζ '
