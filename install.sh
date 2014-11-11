@@ -6,8 +6,8 @@ VERBOSE=false
 
 BACKUPS="$HOME/.rc-backups"
 
-DOTFILES="bashrc bash_aliases vimrc vim bcrc screenrc"
-BACKUP_TARGETS="$DOTFILES rc"
+DOTFILES="bash_profile bash_aliases vimrc vim bcrc screenrc"
+BACKUP_TARGETS="$DOTFILES"
 
 OKP=true
 
@@ -44,8 +44,6 @@ function do_backup {
 }
 
 function do_install_symlinks {
-
-    ln -s $REPO_DIR $HOME/rc
 
     for dotfile in $DOTFILES
     do
