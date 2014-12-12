@@ -6,7 +6,7 @@ VERBOSE=false
 
 BACKUPS="$HOME/.rc-backups"
 
-DOTFILES="bash_profile bash_aliases vimrc vim bcrc screenrc"
+DOTFILES="bash_profile bash_aliases vimrc vim bcrc screenrc gitconfig"
 BACKUP_TARGETS="$DOTFILES"
 
 OKP=true

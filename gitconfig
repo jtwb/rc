@@ -1,0 +1,9 @@
+[user]
+	name = Jason Benterou
+	email = jason.benterou@gmail.com
+[color]
+	ui = true
+[alias]
+    co = checkout
+    st = status
+
