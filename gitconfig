@@ -6,4 +6,6 @@
 [alias]
     co = checkout
     st = status
+	lsbr = for-each-ref --format='%(committerdate:iso8601) %(committerdate:relative) %(refname)' --sort -committerdate refs/heads/
+	brls = for-each-ref --format='%(committerdate:iso8601) %(committerdate:relative) %(refname)' --sort -committerdate refs/heads/
 
