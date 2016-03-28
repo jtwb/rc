@@ -3,6 +3,8 @@
 	email = jason.benterou@gmail.com
 [color]
 	ui = true
+[push]
+    default = current
 [alias]
     co = checkout
     st = status
